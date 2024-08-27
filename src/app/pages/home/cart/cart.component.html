@@ -1,0 +1,19 @@
+
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h3 class="mt-5">Cart</h3>
+      <p class="lead">Cart Item {{ count() == 1 ? count() + ' item' :
+        count() + ' items'}}</p>
+      <p class="lead">The total amount - {{total() | currency}}</p>
+    </div>
+  </div>
+  <div class="row">
+    @for (item of cartItems();track item.id){
+      <div class="col-4">
+        <app-cart-view [cartItem]="item" ></app-cart-view>
+      </div>
+    }
+  </div>
+</div>

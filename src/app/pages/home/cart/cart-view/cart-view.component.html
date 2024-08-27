@@ -1,0 +1,14 @@
+
+
+
+<div class="card">
+  <img [src]="cartItem().imageUrl" class="card-img-top" alt="image">
+  <div class="card-body">
+    <h5 class="card-text">Quantity - {{cartItem().quantity}}</h5>
+    <p class="card-text">Price - {{cartItem().price}}</p>
+  </div>
+  <app-quantity-stepper [quantityInput]="cartItem().quantity"
+                        (quantityChange)="changeCartItemQuantity($event)" >
+
+  </app-quantity-stepper>
+</div>

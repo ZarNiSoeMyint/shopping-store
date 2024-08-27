@@ -1,0 +1,15 @@
+
+
+<div class="container my-5">
+  <div class="row">
+    @for (product of products(); track product.id){
+      <div class="col-4">
+        <app-product-card [product]="product"
+                          (productOut)="addToCart($event)"
+        ></app-product-card>
+      </div>
+    }
+  </div>
+
+</div>
+
